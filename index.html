@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bunte Ecke Pöggstall · Schultaschen, Schulbedarf & Bücher online reservieren</title>
+<meta name="description" content="Der Fachhandel für Buch, Papier, Spiel, Bastel und Textil in Pöggstall. Schultaschen-Sets online reservieren, Schulliste schicken und im Geschäft abholen.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"Bunte Ecke","description":"Fachhandel für Buch, Papier, Spiel, Bastel und Textil","founder":"Edeltraud Pfeiffer","foundingDate":"1997","telephone":"+43 2758 3319","email":"bunte-ecke@aon.at","address":{"@type":"PostalAddress","streetAddress":"Untere Hauptstraße 8/1","postalCode":"3650","addressLocality":"Pöggstall","addressCountry":"AT"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"15:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}]}
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap topbar-in">
+    <span><b>Online reservieren</b>, in Pöggstall abholen</span>
+    <span class="tb-open" id="tb-open">Mo–Fr 8–12 &amp; 15–18 Uhr · Sa 8–12 Uhr</span>
+    <a href="tel:+4327583319">02758 3319</a>
+  </div>
+</div>
+
+<header class="head" id="top">
+  <div class="wrap head-in">
+    <a class="logo" href="#top" aria-label="Bunte Ecke, zur Startseite"><img src="img/logo.svg" alt="Bunte Ecke" width="300" height="37"></a>
+    <label class="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Schultasche, Motiv oder Serie suchen" autocomplete="off">
+    </label>
+    <nav class="nav" aria-label="Hauptmenü">
+      <a href="#shop">Shop</a>
+      <a href="#schulliste">Schulliste</a>
+      <a href="#laden">Geschäft</a>
+      <a href="#besuch">Besuch</a>
+    </nav>
+    <button class="cart-btn" id="cart-open" aria-label="Warenkorb öffnen">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      <span>Korb</span><b id="cart-count">0</b>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <video class="hero-vid" id="hero-vid" src="video/laden.mp4" poster="video/laden-poster.jpg" autoplay muted loop playsinline preload="auto"></video>
+    <div class="hero-shade"></div>
+    <div class="wrap hero-in">
+      <p class="hero-kicker">Seit 1997 in Pöggstall</p>
+      <h1>Die ganze Bunte Ecke.<br>Jetzt auch von zuhause.</h1>
+      <p class="hero-sub">Schultaschen, Schulbedarf, Bücher und Geschenke. Online aussuchen und reservieren, bei uns im Geschäft abholen und vor Ort beraten lassen.</p>
+      <div class="hero-cta">
+        <a class="btn btn-sun" href="#shop" id="hero-shop">Schultaschen ansehen</a>
+        <a class="btn btn-line" href="#schulliste">Schulliste schicken</a>
+      </div>
+    </div>
+    <div class="hero-note wrap">
+      <span class="stars" aria-hidden="true">★★★★<i>★</i></span>
+      <span><b>4,2</b> bei Google · Untere Hauptstraße 8/1</span>
+    </div>
+  </section>
+
+  <!-- Signature: category rail as folder spines, like the Ordner wall in the shop -->
+  <section class="spines-sec" aria-label="Sortiment">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Das Sortiment</h2>
+        <p>Vom Rechenheft bis zur Taufkerze. Ein Griff ins Regal.</p>
+      </div>
+      <div class="spines" id="spines"></div>
+    </div>
+  </section>
+
+  <section class="shop" id="shop">
+    <div class="wrap">
+      <div class="shop-head">
+        <div>
+          <p class="eyebrow">Shop · Schuljahr 2026/27</p>
+          <h2>Schultaschen-Sets &amp; mehr</h2>
+        </div>
+        <p class="shop-lede">Die Schultaschen-Sets von Step by Step, Schleich und Spiegelburg, alle mehrteilig und so, wie sie bei uns im Regal stehen. Du reservierst, wir legen zurück, du probierst in Ruhe im Geschäft.</p>
+      </div>
+
+      <div class="filters" id="filters">
+        <div class="chips" id="chips-cat" role="tablist" aria-label="Kategorie"></div>
+        <div class="filter-row">
+          <div class="chips small" id="chips-motiv" aria-label="Motivwelt"></div>
+          <label class="sort">Sortieren
+            <select id="sort">
+              <option value="pop">Empfohlen</option>
+              <option value="asc">Preis aufsteigend</option>
+              <option value="desc">Preis absteigend</option>
+              <option value="az">Name A–Z</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <p class="result-count" id="result-count"></p>
+      <ul class="grid" id="grid"></ul>
+      <div class="more-wrap" id="more-wrap"><button class="btn btn-line-ink" id="show-all">Alle <span id="show-n"></span> Artikel zeigen</button></div>
+      <p class="empty" id="empty" hidden>Dazu haben wir online gerade nichts. Im Geschäft sicher, ruf uns einfach an: <a href="tel:+4327583319">02758 3319</a></p>
+    </div>
+  </section>
+
+  <section class="perks" aria-label="So funktioniert's">
+    <div class="wrap perks-in">
+      <div class="perk"><span class="num" style="--c:var(--yellow)">1</span><div><h3>Online aussuchen</h3><p>Alle Preise wie im Geschäft. Ohne Konto, ohne Vorauszahlung.</p></div></div>
+      <div class="perk"><span class="num" style="--c:var(--orange)">2</span><div><h3>Wir legen zurück</h3><p>Wir melden uns per Anruf oder WhatsApp, sobald alles bereitliegt.</p></div></div>
+      <div class="perk"><span class="num" style="--c:var(--green)">3</span><div><h3>Abholen in Pöggstall</h3><p>Probetragen, Gurte einstellen lassen und vor Ort bezahlen.</p></div></div>
+    </div>
+  </section>
+
+  <section class="list-sec" id="schulliste">
+    <div class="wrap list-in">
+      <div class="list-copy">
+        <p class="eyebrow">Schullisten-Service</p>
+        <h2>Foto von der Schulliste.<br>Wir richten alles her.</h2>
+        <p>Kein Suchen, kein Warten an der Kassa. Schick uns die Liste von der Schule, wir packen Hefte, Stifte und Mappen zusammen und sagen dir Bescheid, wenn das Sackerl abholbereit ist.</p>
+        <form class="list-form" id="list-form" novalidate>
+          <label class="drop" id="drop">
+            <input type="file" id="list-file" accept="image/*,.pdf">
+            <span class="drop-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h3l2-2h6l2 2h3v12H4z"/><circle cx="12" cy="13" r="3.5"/></svg></span>
+            <span class="drop-t"><b id="drop-name">Foto oder PDF auswählen</b><small>oder hierher ziehen</small></span>
+          </label>
+          <div class="row2">
+            <label>Schule &amp; Klasse<input id="l-class" placeholder="z. B. VS Pöggstall, 2. Klasse"></label>
+            <label>Abholung ab<select id="l-day"></select></label>
+          </div>
+          <div class="row2">
+            <label>Name<input id="l-name" autocomplete="name" placeholder="Vor- und Nachname"></label>
+            <label>Telefon<input id="l-tel" type="tel" autocomplete="tel" placeholder="0664 …"></label>
+          </div>
+          <p class="form-msg" id="l-msg" role="status"></p>
+          <button class="btn btn-ink" type="submit">Schulliste senden</button>
+          <small class="fine">Wird per WhatsApp an die Bunte Ecke übergeben. Unverbindlich, bezahlt wird bei Abholung.</small>
+        </form>
+      </div>
+      <div class="list-paper" aria-hidden="true">
+        <div class="paper">
+          <p class="paper-h">Schulliste 2. Klasse</p>
+          <ul id="paper-list">
+            <li>2 Rechenhefte, kariert</li>
+            <li>1 Schreibheft liniert</li>
+            <li>Füllfeder + Patronen</li>
+            <li>Buntstifte, 12 Stk.</li>
+            <li>Wasserfarben</li>
+            <li>Schnellhefter rot, blau</li>
+          </ul>
+          <span class="tick t1"></span><span class="tick t2"></span><span class="tick t3"></span>
+        </div>
+        <div class="paper-done" id="paper-done"><b>Abholbereit</b><span>Bunte Ecke · Pöggstall</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="laden" id="laden">
+    <div class="wrap">
+      <div class="laden-grid">
+        <figure class="lg-a"><img src="img/shop/laden-2.jpg" alt="Schultaschen-Regal in der Bunten Ecke"></figure>
+        <figure class="lg-b"><img src="img/shop/laden-6.jpg" alt="Stifte und Malsachen"></figure>
+        <figure class="lg-c"><img src="img/shop/laden-9.jpg" alt="Blick in den Laden"></figure>
+        <div class="lg-text">
+          <p class="eyebrow">Familienbetrieb</p>
+          <h2>Seit 1997 die Ecke mit allem.</h2>
+          <p>Edeltraud Pfeiffer hat die Bunte Ecke gegründet, als in Pöggstall das Papierfachgeschäft zusperrte. 1999 kam Sohn Franz dazu. Schultaschen-Ausstellungen, Bücher und Schulbuchlieferungen wurden zum Herzstück, seit 2022 in der Unteren Hauptstraße 8/1.</p>
+          <p class="sig">Franz Pfeiffer &amp; Team</p>
+        </div>
+        <figure class="lg-d"><img src="img/shop/laden-1.jpg" alt="Ordner, Mappen und Karten"></figure>
+        <figure class="lg-e"><img src="img/shop/laden-8.jpg" alt="Staedtler-Regal"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="more" aria-label="Weitere Sortimente">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Im Geschäft und auf Anfrage</h2>
+        <p>Was nicht im Shop steht, haben wir meist trotzdem. Kurz fragen, wir legen es zurück.</p>
+      </div>
+      <div class="more-grid" id="more-grid"></div>
+    </div>
+  </section>
+
+  <section class="christina">
+    <div class="wrap ch-in">
+      <img src="img/shop/christina.webp" alt="Buch Mit Christina durchs Jahr">
+      <div>
+        <p class="eyebrow">Neu bei uns</p>
+        <h2>Backen &amp; Kochen mit Christina Bauer</h2>
+        <p>Das neue Buch „Mit Christina durchs Jahr“ und die ganze Reihe zum Backen, Kochen und Brotbacken gibt es in der Bunten Ecke.</p>
+        <button class="btn btn-ink" data-add="395">In den Korb · € 32,90</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="besuch">
+    <div class="wrap visit-in">
+      <div>
+        <p class="eyebrow">Besuch</p>
+        <h2>Untere Hauptstraße 8/1<br>3650 Pöggstall</h2>
+        <table class="hours" id="hours">
+          <tr data-d="1"><th>Montag</th><td>08–12 &amp; 15–18 Uhr</td></tr>
+          <tr data-d="2"><th>Dienstag</th><td>08–12 &amp; 15–18 Uhr</td></tr>
+          <tr data-d="3"><th>Mittwoch</th><td>08–12 &amp; 15–18 Uhr</td></tr>
+          <tr data-d="4"><th>Donnerstag</th><td>08–12 &amp; 15–18 Uhr</td></tr>
+          <tr data-d="5"><th>Freitag</th><td>08–12 &amp; 15–18 Uhr</td></tr>
+          <tr data-d="6"><th>Samstag</th><td>08–12 Uhr</td></tr>
+          <tr data-d="0"><th>Sonntag</th><td>geschlossen</td></tr>
+        </table>
+        <div class="visit-cta">
+          <a class="btn btn-ink" href="tel:+4327583319">02758 3319</a>
+          <a class="btn btn-line-ink" href="https://wa.me/436767582070" target="_blank" rel="noopener">WhatsApp 0676 75 82 070</a>
+        </div>
+      </div>
+      <div class="map">
+        <iframe title="Karte Bunte Ecke Pöggstall" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=15.1985%2C48.3150%2C15.2090%2C48.3193&amp;layer=mapnik&amp;marker=48.31714%2C15.20368"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <img src="img/logo.svg" alt="Bunte Ecke" class="foot-logo">
+    <p>Fachhandel für Buch · Papier · Spiel · Bastel · Textil</p>
+    <p>Franz Pfeiffer · Untere Hauptstraße 8/1 · 3650 Pöggstall · <a href="mailto:bunte-ecke@aon.at">bunte-ecke@aon.at</a></p>
+    <p class="foot-links"><a href="https://www.instagram.com/bunte_ecke_poeggstall/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/www.bunteecke.at/" target="_blank" rel="noopener">Facebook</a> · <a href="#">Impressum</a> · <a href="#">Datenschutz</a></p>
+  </div>
+</footer>
+
+<!-- product quick view -->
+<div class="modal" id="pv" aria-hidden="true">
+  <div class="modal-bg" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="pv-name">
+    <button class="x" data-close aria-label="Schließen">×</button>
+    <div class="pv-img"><img id="pv-img" alt=""></div>
+    <div class="pv-body">
+      <p class="eyebrow" id="pv-serie"></p>
+      <h3 id="pv-name"></h3>
+      <p class="pv-price" id="pv-price"></p>
+      <ul class="pv-feat" id="pv-feat"></ul>
+      <div class="pv-stock"><span class="dot"></span> Im Geschäft lagernd · wir melden uns, sobald es bereitliegt</div>
+      <button class="btn btn-sun wide" id="pv-add">In den Korb</button>
+    </div>
+  </div>
+</div>
+
+<!-- cart drawer with click & collect checkout -->
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-bg" data-dclose></div>
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Warenkorb">
+    <div class="dr-head">
+      <div class="steps" id="steps"><span class="on">Korb</span><span>Abholung</span><span>Fertig</span></div>
+      <button class="x" data-dclose id="dr-close" aria-label="Schließen">×</button>
+    </div>
+    <div class="dr-step on" data-step="0">
+      <ul class="cart-list" id="cart-list"></ul>
+      <p class="cart-empty" id="cart-empty">Dein Korb ist noch leer.</p>
+      <div class="dr-foot">
+        <div class="sum"><span>Summe</span><b id="cart-sum">€ 0,00</b></div>
+        <p class="fine">Abholung im Geschäft, kostenlos. Bezahlt wird vor Ort.</p>
+        <button class="btn btn-sun wide" id="to-step1">Weiter zur Abholung</button>
+      </div>
+    </div>
+    <div class="dr-step" data-step="1">
+      <h3>Wann holst du ab?</h3>
+      <div class="days" id="days"></div>
+      <div class="slots" id="slots">
+        <button data-s="vormittags" class="on">Vormittag 8–12</button>
+        <button data-s="nachmittags">Nachmittag 15–18</button>
+      </div>
+      <label>Name<input id="c-name" autocomplete="name" placeholder="Vor- und Nachname"></label>
+      <label>Telefon<input id="c-tel" type="tel" autocomplete="tel" placeholder="0664 …"></label>
+      <p class="form-msg" id="c-msg" role="status"></p>
+      <div class="dr-foot">
+        <div class="sum"><span id="c-items">0 Artikel</span><b id="c-sum">€ 0,00</b></div>
+        <button class="btn btn-sun wide" id="to-step2">Verbindlich reservieren</button>
+        <button class="link-back" id="back0">Zurück zum Korb</button>
+      </div>
+    </div>
+    <div class="dr-step" data-step="2">
+      <div class="done">
+        <div class="tag-ticket">
+          <span class="hole"></span>
+          <p class="tt-k">Reservierung</p>
+          <p class="tt-no" id="d-no">BE-0000</p>
+          <p class="tt-l" id="d-who"></p>
+          <p class="tt-l" id="d-when"></p>
+          <p class="tt-sum" id="d-sum"></p>
+        </div>
+        <h3>Danke, wir legen alles zurück.</h3>
+        <p>Die Bunte Ecke meldet sich bei dir, sobald deine Sachen abholbereit sind.</p>
+        <a class="btn btn-line-ink wide" id="d-wa" href="#" target="_blank" rel="noopener">Zusätzlich per WhatsApp schicken</a>
+        <button class="btn btn-ink wide" data-dclose id="d-close">Weiter stöbern</button>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status"></div>
+
+<nav class="mbar" aria-label="Schnellzugriff">
+  <a href="tel:+4327583319">Anrufen</a>
+  <a href="#schulliste">Schulliste</a>
+  <button id="mbar-cart">Korb <b id="mbar-count">0</b></button>
+</nav>
+
+<script src="products.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
