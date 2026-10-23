@@ -154,7 +154,7 @@ function addToCart(id, fromEl) {
   save(); updateCart(true);
   flyToCart(id, fromEl);
   const btn = fromEl && fromEl.classList && fromEl.classList.contains('add') ? fromEl : null;
-  if (btn) { btn.classList.add('ok'); btn.innerHTML = check; setTimeout(() => { btn.classList.remove('ok'); btn.innerHTML = plus; }, 1400); }
+  if (btn) { btn.classList.add('ok'); btn.innerHTML = check; if (!REC) setTimeout(() => { btn.classList.remove('ok'); btn.innerHTML = plus; }, 1400); }
   toast(`${byId(id).name} liegt im Korb`);
 }
 function flyToCart(id, fromEl) {
@@ -313,7 +313,7 @@ function scrollToEl(sel) {
 const vid = $('#hero-vid');
 if (REC || matchMedia('(prefers-reduced-motion: reduce)').matches) { vid.removeAttribute('autoplay'); vid.pause(); }
 window.__seekVideo = t => new Promise(res => {
-  const target = (t % 12);
+  const target = t % (vid.duration || 15);
   if (Math.abs(vid.currentTime - target) < 0.001) return res();
   const done = () => { vid.removeEventListener('seeked', done); res(); };
   vid.addEventListener('seeked', done); vid.currentTime = target;
